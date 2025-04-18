@@ -159,7 +159,7 @@ export default function JournalEntries() {
 
       </form>
 
-     {/* Error Message */}
+
      {error && (
         <div className="flex items-center mt-4 text-sm text-red-600 bg-red-100 p-3 rounded-md">
           <AlertTriangle className="mr-2" size={18} />
@@ -167,7 +167,6 @@ export default function JournalEntries() {
         </div>
       )}
 
-      {/* Success Message */}
       {success && (
         <div className="flex items-center mt-4 text-sm text-green-700 bg-green-100 p-3 rounded-md">
           <CheckCircle className="mr-2" size={18} />

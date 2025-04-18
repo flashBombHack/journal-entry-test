@@ -33,12 +33,10 @@ app.get('/api/entries', async (req, res) => {
   }
 });
 
-// POST /api/entries - create a journal + ledger entry
+
 app.post('/api/entries', async (req, res) => {
   const client = await pool.connect();
   const { entry_date, description, debit_account, credit_account, amount } = req.body;
-
-  // ✅ Basic Validation
   if (!entry_date || !description || !debit_account || !credit_account || !amount) {
     return res.status(400).json({ error: "All fields are required" });
   }
@@ -91,7 +89,7 @@ app.post('/api/entries', async (req, res) => {
   }
 });
 
-// GET /api/ledger - all ledger entries
+
 app.get('/api/ledger', async (req, res) => {
   try {
     const result = await pool.query(`SELECT * FROM ledger_entry ORDER BY created_at DESC`);
