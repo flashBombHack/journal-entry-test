@@ -2,6 +2,8 @@
 
 Follow these steps to set up and run the project:
 
+node version required - V20.9.0
+
 ## 1. Install Dependencies
 
 Navigate to the `api` and `frontend` directories and run the following command in each:
