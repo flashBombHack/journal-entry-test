@@ -68,7 +68,8 @@ export default function JournalEntries() {
     }
   };
 
-  const isFormValid = Object.values(form).every((val) => val.trim() !== "");
+  const isFormValid = Object.values(form).every((val) => String(val).trim() !== "");
+
 
   const formatDate = (isoDate) => {
     const date = new Date(isoDate);
